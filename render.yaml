@@ -3,8 +3,9 @@ services:
     name: opscraft-backend
     runtime: node
     plan: free
-    buildCommand: cd backend && npm install && npm run build
-    startCommand: cd backend && npm start
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    workingDirectory: backend
     envVars:
       - key: NODE_ENV
         value: production
